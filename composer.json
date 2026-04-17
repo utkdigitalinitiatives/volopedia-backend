@@ -16,10 +16,12 @@
     ],
     "require": {
         "composer/installers": "^2.3",
+        "drupal/az_blob_fs": "^3.0",
         "drupal/core-composer-scaffold": "^11.3",
         "drupal/core-project-message": "^11.3",
         "drupal/core-recipe-unpack": "^11.3",
         "drupal/core-recommended": "^11.3",
+        "drupal/key": ">=1.15",
         "drush/drush": "^13.7"
     },
     "conflict": {
@@ -38,7 +40,14 @@
             "php-http/discovery": true,
             "php-tuf/composer-integration": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "audit": {
+            "ignore": {
+                "SA-CORE-2026-001": "Awaiting upstream patch",
+                "SA-CORE-2026-002": "Awaiting upstream patch",
+                "SA-CORE-2026-003": "Awaiting upstream patch"
+            }
+        }
     },
     "extra": {
         "drupal-scaffold": {
